@@ -15,8 +15,8 @@ export default {
       main: true,
       browser: true,
     }),
-    commonjs(),
-    babel({}),
+    // commonjs(),
+    // babel({}),
     uglify()
   ],
 }
