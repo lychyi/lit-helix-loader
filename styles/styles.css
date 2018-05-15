@@ -1,4 +1,6 @@
 .helix-loader {
+  font-size: 16px;
+  font-family: sans-serif;
   user-select: none;
 }
 .helix-loader .dots {
@@ -8,7 +10,7 @@
 .helix-loader .dots:not(:last-child) {
   margin-right: 6.5px;
 }
-.helix-loader .dots:before, .helix-loader .dots:after {
+.helix-loader .dots .top, .helix-loader .dots .bot {
   border-radius: 50%;
   content: "";
   display: inline-block;
@@ -16,124 +18,124 @@
   width: 5px;
   position: absolute;
 }
-.helix-loader .dots:after {
+.helix-loader .dots .bot {
   left: 12px;
 }
-.helix-loader .dots:nth-child(1):before {
+.helix-loader .dots:nth-child(1) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -2.7s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(1):after {
+.helix-loader .dots:nth-child(1) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -2.7s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(2):before {
+.helix-loader .dots:nth-child(2) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -5.4s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(2):after {
+.helix-loader .dots:nth-child(2) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -5.4s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(3):before {
+.helix-loader .dots:nth-child(3) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -8.1s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(3):after {
+.helix-loader .dots:nth-child(3) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -8.1s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(4):before {
+.helix-loader .dots:nth-child(4) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -10.8s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(4):after {
+.helix-loader .dots:nth-child(4) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -10.8s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(5):before {
+.helix-loader .dots:nth-child(5) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -13.5s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(5):after {
+.helix-loader .dots:nth-child(5) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -13.5s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(6):before {
+.helix-loader .dots:nth-child(6) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -16.2s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(6):after {
+.helix-loader .dots:nth-child(6) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -16.2s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(7):before {
+.helix-loader .dots:nth-child(7) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -18.9s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(7):after {
+.helix-loader .dots:nth-child(7) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -18.9s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(8):before {
+.helix-loader .dots:nth-child(8) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -21.6s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(8):after {
+.helix-loader .dots:nth-child(8) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -21.6s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(9):before {
+.helix-loader .dots:nth-child(9) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -24.3s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(9):after {
+.helix-loader .dots:nth-child(9) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -24.3s;
   background-color: #BAC1CB;
   transform: translateY(330%);
 }
-.helix-loader .dots:nth-child(10):before {
+.helix-loader .dots:nth-child(10) .top {
   animation: animBefore 3s linear infinite;
   animation-delay: -27s;
   background-color: #ffc874;
   transform: translateY(-330%);
 }
-.helix-loader .dots:nth-child(10):after {
+.helix-loader .dots:nth-child(10) .bot {
   animation: animAfter 3s linear infinite;
   animation-delay: -27s;
   background-color: #BAC1CB;
@@ -191,3 +193,5 @@
     z-index: 1;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

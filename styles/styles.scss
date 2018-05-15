@@ -59,7 +59,7 @@ $offsetTime: 0.9*$animationTime;
       margin-right: $dotOffset;
     }
     
-    &:before, &:after {
+    .top, .bot {
       border-radius: 50%;
       content: "";
       display: inline-block;
@@ -68,20 +68,20 @@ $offsetTime: 0.9*$animationTime;
       position: absolute;
     }
     
-    &:after {
+    .bot {
       left: $strandOffset;
     }
     
     @for $i from 1 through $numberOfDots {
       &:nth-child(#{$i}) {
-        &:before {
+        .top {
           animation: animBefore $animationTime linear infinite;
           animation-delay: $i*-$offsetTime;
           background-color: $topDotColor;
           transform: translateY(-$helixHeight);
         }
         
-        &:after {
+        .bot {
           animation: animAfter $animationTime linear infinite;
           animation-delay: $i*-$offsetTime;
           background-color: $bottomDotColor;
