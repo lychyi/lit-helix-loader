@@ -1,0 +1,153 @@
+// https://codepen.io/lychyi/pen/wGYvRZ
+// Please use some form of autoprefixer for vendor prefixes before you release to production.
+
+// DNA molecules exhibit chirality https://en.wikipedia.org/wiki/Chirality. While it's true that z-DNA molecules are "left-handed", the b-DNA molecule is more commonly represented and is a "right-handed" double helix.
+
+// These are specific parameters to the helix itself
+// Colors when dots get "nearer"
+$topDotColorNear: #ffb441;
+$bottomDotColorNear: #8995A5;
+
+$topDotColor: lighten($topDotColorNear, 10);
+$bottomDotColor: #BAC1CB;
+
+// Helix Configuration
+// -------------------
+
+// Slow or fast rotation
+$animationTime: 3s;
+
+// Dot size adjustment
+$dotSize: 5px;
+
+// Based on the scale of the y-axis, this will adjust how tall/fat the helix is
+$helixHeight: 330%;
+
+// Make max/minScale further apart for a more dramatic helix, the closer they are to being the same the poorer the illusion of depth gets
+// Multiplier for when dots get 'closer'
+$maxScale: 1.6;
+
+// Multiplier for when dots get 'further'
+$minScale: 0.5;
+
+ // Must add extra span elements to accommodate if you change
+$numberOfDots: 10;
+
+// 0px will make the helix strands symmetrical, real DNA helices are generally not like this, the two strands are skewed, for example, increase to 22px to see a difference and double the number of dots
+$strandOffset: 12px;
+
+// Calculations - probably don't want to mess with these
+// -----------------------------------------------------
+
+// If you put a coefficient on this parameter, then the colors won't fully transition with the size of the individual nucleotides/dots... helpful for more subtle color variations
+$colorTransitionTime: $animationTime;
+
+// This is how far apart the dots are set. the bigger the number the longer and more spacious the DNA strand.
+$dotOffset: $dotSize*1.3;
+
+// How tightly wound the helix is. generally you'll only change the value from 0.9 to 0.95, anything else would require parameter changes elsewhere to get to to look like a DNA molecule
+$offsetTime: 0.9*$animationTime;
+.helix-loader {
+  font-size: 16px;
+  font-family: sans-serif;
+  user-select: none;
+  .dots {
+    display: inline-block;
+    position: relative;
+
+    &:not(:last-child){
+      margin-right: $dotOffset;
+    }
+    
+    &:before, &:after {
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: $dotSize;
+      width: $dotSize;    
+      position: absolute;
+    }
+    
+    &:after {
+      left: $strandOffset;
+    }
+    
+    @for $i from 1 through $numberOfDots {
+      &:nth-child(#{$i}) {
+        &:before {
+          animation: animBefore $animationTime linear infinite;
+          animation-delay: $i*-$offsetTime;
+          background-color: $topDotColor;
+          transform: translateY(-$helixHeight);
+        }
+        
+        &:after {
+          animation: animAfter $animationTime linear infinite;
+          animation-delay: $i*-$offsetTime;
+          background-color: $bottomDotColor;
+          transform: translateY($helixHeight);
+        }
+      }
+    }
+  }
+  @keyframes animBefore {
+    0% {
+      transform: scale(1) translateY($helixHeight);
+      z-index: 1;
+    }
+    
+    25% {
+      background-color: $topDotColorNear;
+      transition: background-color $colorTransitionTime linear;
+      transform: scale($maxScale) translateY(0);
+      z-index: 1;
+    }
+    
+    50% {
+      transform: scale(1) translateY(-$helixHeight);
+      z-index: -1;
+    }
+    
+    75% {
+      background-color: $topDotColor;
+      transition: background-color $colorTransitionTime linear;
+      transform: scale($minScale) translateY(0);
+      z-index: -1;
+    }
+    
+    100% {
+      transform: scale(1) translateY($helixHeight);
+      z-index: -1;
+    }
+  }
+  @keyframes animAfter {
+    0% {
+      transform: scale(1) translateY(-$helixHeight);
+      z-index: -1;
+    }
+    
+    25% {
+      background-color: $bottomDotColor;
+      transition: background-color $colorTransitionTime linear;
+      transform: scale($minScale) translateY(0);
+      z-index: -1;
+    }
+    
+    50% {
+      transform: scale(1) translateY($helixHeight);
+      z-index: 1;
+    }
+    
+    75% {
+      background-color: $bottomDotColorNear;
+      transition: background-color $colorTransitionTime linear;
+      transform: scale($maxScale) translateY(0);
+      z-index: 1;
+    }
+    
+    100% {
+      transform: scale(1) translateY(-$helixHeight);
+      z-index: 1;
+    }
+  }
+}

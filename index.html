@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ATCG Elements - Helix Loader</title>
+  <script src="node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="atcg-helix-loader.min.js"></script>
+  <style>
+    body {
+      font-family: monospace;
+    }
+    .overlay {
+      background-color: rgba(255,255,255,0.8);
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 640px;
+      width: 80vw;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.0rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 2.0rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <atcg-helix-loader></atcg-helix-loader>
+  </div>
+  <div class="container">
+    <h1>There's something behind this loader</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nisi, voluptatem, quam quos quia omnis officia ipsam enim voluptatibus magni repudiandae sapiente voluptate natus deleniti inventore cupiditate aut harum debitis.
+    Optio sapiente autem minima sit nam cum, reprehenderit quam temporibus itaque. Minima neque vel consequuntur cumque sequi, alias officia, facere iusto quibusdam beatae id dolores molestiae et, repellat error corrupti.
+    Quam asperiores animi laudantium accusamus enim sed fugit. Pariatur accusamus sapiente, temporibus beatae nihil quis consequuntur impedit harum hic sunt qui quo itaque asperiores est at dolor dolore, quam fuga!
+    Fugiat eos quasi, quas pariatur tempora quos, dignissimos, incidunt optio laborum provident quidem. Dolores perferendis quasi obcaecati eum accusamus? Fuga officia qui sunt, tempora ipsam dicta molestias doloribus nam temporibus?
+    Recusandae quia unde repellat sit delectus, asperiores harum esse adipisci id pariatur at nihil dolor numquam. Consequuntur ipsa magni eveniet ab rerum deleniti, maiores deserunt velit libero doloremque temporibus. Beatae.</p>
+  </div>
+</body>
+</html>
