@@ -11,11 +11,12 @@ export default {
   },
   plugins: [
     resolve({
+      module: true,
       jsnext: true,
       main: true,
       browser: true,
     }),
-    // commonjs(),
+    commonjs(),
     // babel({}),
     uglify()
   ],
