@@ -6,7 +6,7 @@ import uglify from 'rollup-plugin-uglify';
 export default {
   input: 'src/scripts/main.js',
   output: {
-    file: './atcg-helix-loader.min.js',
+    file: './lit-helix-loader.min.js',
     format: 'iife'
   },
   plugins: [

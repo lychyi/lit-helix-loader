@@ -1,6 +1,6 @@
 import { LitElement, html } from '@polymer/lit-element';
 
-class AtcgHelixLoader extends LitElement {
+class LitHelixLoader extends LitElement {
 
   static get properties() {};
 
@@ -219,4 +219,4 @@ class AtcgHelixLoader extends LitElement {
   }
 }
 
-customElements.define('atcg-helix-loader', AtcgHelixLoader);
+customElements.define('lit-helix-loader', LitHelixLoader);

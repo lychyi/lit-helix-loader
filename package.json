@@ -1,6 +1,6 @@
 {
-  "name": "atcg-helix-loader",
-  "version": "1.0.0",
+  "name": "lit-helix-loader",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
